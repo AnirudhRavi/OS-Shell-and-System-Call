@@ -7,9 +7,10 @@
 *Developing a Shell*:
 
 The shell or command line interpreter is the fundamental User interface to an Operating System. Wrote a simple shell in C named as osshell that has the following properties. It supports the following internal commands:
-	- cd DirectoryName - Change the current working directory to DirectoryName. If the DirectoryName argument is not present, reports the current directory. If the directory does not exist an appropriate error message is reported
-	- mkdir DirectoryName - Create a directory in the current working directory
-	- quit - Quit the shell
+
+- cd DirectoryName - Change the current working directory to DirectoryName. If the DirectoryName argument is not present, reports the current directory. If the directory does not exist an appropriate error message is reported
+- mkdir DirectoryName - Create a directory in the current working directory
+- quit - Quit the shell
 
 All other command line input is interpreted as program invocation, which should be done by shell forking and
 executing the programs as its own child process.
@@ -18,7 +19,7 @@ executing the programs as its own child process.
 
 A system call is the standard way an OS service is exported to a user program. For example, a system call may be used to give users access to internal information of a file system such as superblock or inodes. The procedure to create a system call varies in different versions of Linux. When you add a system call you will have to recompile the Linux kernel, so you must have the Linux source tree installed on your system.
 
-- Creating the System Call Source: Created a simple hellow world system call called os_syscall.c with the following code:
+- Creating the System Call Source: Created a simple hello world system call called os_syscall.c with the following code:
 ```C
 #include <linux/kernel.h>
 #include <linux/linkage.h>
